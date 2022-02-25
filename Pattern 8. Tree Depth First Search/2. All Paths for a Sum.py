@@ -17,11 +17,12 @@ class Solution(object):
         if not current:
             return
         
+        #if current node is a leaf & its value is equal to targetSum,  we append the path to result     
         if not current.left and not current.right and current.val == targetSum:
             path.append(current.val)
             result.append(path)
             
-        #traverse the left sub tree
+        #we add the current node value to the path    
+        #recursively call to traverse the left & right sub tree
         self.hasPathSum(current.left, targetSum - current.val, path + [current.val], result)
-        #traverse the left sub tree
-        self.hasPathSum(current.right, targetSum - current.val, path + [current.val], result)
+        self.hasPathSum(current.right, targetSum - current.val, path + [current.val], result
