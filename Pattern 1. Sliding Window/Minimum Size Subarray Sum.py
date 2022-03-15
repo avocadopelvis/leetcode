@@ -19,7 +19,7 @@ class Solution(object):
                 current -= nums[start]
                 start += 1
         
-        #if minimal length not found
+        #if subarray not found
         if minlen == float('inf'):
                 return 0
             
