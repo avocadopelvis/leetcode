@@ -13,11 +13,14 @@ class Solution(object):
         for end in range(len(nums)):
             current += nums[end]
             
+            #find the sum greater than or equal to target
             while current >= target:
                 minlen = min(minlen, end-start + 1)
                 current -= nums[start]
                 start += 1
-                
+        
+        #if minimal length not found
         if minlen == float('inf'):
                 return 0
+            
         return minlen
