@@ -6,7 +6,9 @@ class Solution(object):
         :type fruits: List[int]
         :rtype: int
         """
+        #keep count of the fruit types
         fruitType = Counter()
+        
         maxFruits = distinct = 0
         left = right = 0
         
@@ -14,6 +16,7 @@ class Solution(object):
             #check if it is a new fruit & update the counter
             if fruitType[fruits[right]] == 0:
                 distinct += 1
+            #if not new fruit, this will keep running
             fruitType[fruits[right]] += 1
             
             #too many different fruits, start shrinking the window
@@ -29,4 +32,4 @@ class Solution(object):
             right += 1
             
         return maxFruits
-      
+        
