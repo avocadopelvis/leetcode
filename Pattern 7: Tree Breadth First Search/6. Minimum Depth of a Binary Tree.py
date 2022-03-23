@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/minimum-depth-of-binary-tree/
+
 class Solution(object):
     def minDepth(self, root):
         """
