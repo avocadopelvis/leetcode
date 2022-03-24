@@ -21,6 +21,8 @@ class Solution(object):
 #             return 1 + max(self.minDepth(root.left), self.minDepth(root.right))
         
         #BFS
+        # we get the minimum depth when we reach a leaf node
+        
         minDepth = 0
         queue = deque()
         queue.append(root)
