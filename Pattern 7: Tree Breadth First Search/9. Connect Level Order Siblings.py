@@ -25,7 +25,7 @@ class Solution(object):
                 currentNode.left.next = currentNode.right
                 
                 #to point a right child node to a left child node of another node
-                if currentNode.next:
+                if currentNode.next: #if currentNode.next is not empty, it means that it is pointing to a right node
                     currentNode.right.next = currentNode.next.left
                 
                 #since it is a perfect binary tree, no need to check 
@@ -33,3 +33,4 @@ class Solution(object):
                 queue.append(currentNode.right)
 
         return root
+    
