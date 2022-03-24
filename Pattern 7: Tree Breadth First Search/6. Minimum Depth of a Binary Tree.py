@@ -12,12 +12,13 @@ class Solution(object):
         
         #DFS RECURSIVE
         
-        #if both left and right node are not empty
-        # if root.left and root.right:
-        #     return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
-        # #if one of the nodes is empty
-        # else:
-        #     return 1 + max(self.minDepth(root.left), self.minDepth(root.right))
+#         # if both left & right child are not empty
+#         if root.left and root.right:
+#             return 1 + min(self.minDepth(root.left), self.minDepth(root.right))
+#         # if one of the child is empty
+#         else:
+#             # we're taking max since one of the subtree is empty which would give 0
+#             return 1 + max(self.minDepth(root.left), self.minDepth(root.right))
         
         #BFS
         minDepth = 0
