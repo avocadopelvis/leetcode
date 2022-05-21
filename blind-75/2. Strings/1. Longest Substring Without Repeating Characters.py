@@ -16,3 +16,15 @@
 # • Time complexity is O(n) since we iterate through the whole string
 # • Space complexity is O(n) because potentially every character in the string can be unique & so add all of them to our set. 
 
+l = maxStr = 0
+seen = {}
+
+for r in range(len(s)):
+    if s[r] in seen:
+        l += 1
+    else:
+        seen[s[r]] = r
+        maxStr = max(maxStr, len(seen))
+
+return maxStr
+
