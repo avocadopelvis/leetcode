@@ -19,3 +19,5 @@ class Solution(object):
                 r = mid - 1
                 
         return l
+    
+    
