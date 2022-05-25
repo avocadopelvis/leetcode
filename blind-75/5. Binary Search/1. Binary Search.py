@@ -1,5 +1,7 @@
 # https://leetcode.com/problems/binary-search/solution/
 
+# binary search always left <= right
+
 # look at solution in leetcode for explanation
 
 class Solution(object):
