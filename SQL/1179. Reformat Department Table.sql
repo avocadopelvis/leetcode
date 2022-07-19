@@ -18,28 +18,28 @@ GROUP BY id
 ORDER BY id;
 
 
-If you don't use the group by and run such query:
+-- If you don't use the group by and run such query:
 
-SELECT id,
-CASE WHEN month = "Jan" THEN revenue END as "Jan_Revenue",
-CASE WHEN month = "Feb" THEN revenue END AS "Feb_Revenue"
-FROM Department;
+-- SELECT id,
+-- CASE WHEN month = "Jan" THEN revenue END as "Jan_Revenue",
+-- CASE WHEN month = "Feb" THEN revenue END AS "Feb_Revenue"
+-- FROM Department;
 
-this will return multiple rows for each id + month pair:
+-- this will return multiple rows for each id + month pair:
 
-+----+-------------+-------------+
-| id | Jan_Revenue | Feb_Revenue |
-+----+-------------+-------------+
-|  1 |        NULL |        7000 |
-|  1 |        8000 |        NULL |
-|  1 |        NULL |        NULL |
-|  2 |        9000 |        NULL |
-|  3 |        NULL |       10000 |
-+----+-------------+-------------+
+-- +----+-------------+-------------+
+-- | id | Jan_Revenue | Feb_Revenue |
+-- +----+-------------+-------------+
+-- |  1 |        NULL |        7000 |
+-- |  1 |        8000 |        NULL |
+-- |  1 |        NULL |        NULL |
+-- |  2 |        9000 |        NULL |
+-- |  3 |        NULL |       10000 |
+-- +----+-------------+-------------+
 
-To get one row for each id we need to aggregate by id using GROUP BY. 
-But since we have multiple rows with the same id but different values (e.g. for id=1 we have Jan_Revenues: NULL, 8000 and NULL. 
-When we merge these 3 together what value should be chosen? This is why we need either SUM (NULL+8000+NULL) or MAX, in both cases 8000 will be used. 
+-- To get one row for each id we need to aggregate by id using GROUP BY. 
+-- But since we have multiple rows with the same id but different values (e.g. for id=1 we have Jan_Revenues: NULL, 8000 and NULL. 
+-- When we merge these 3 together what value should be chosen? This is why we need either SUM (NULL+8000+NULL) or MAX, in both cases 8000 will be used. 
 
 
 
