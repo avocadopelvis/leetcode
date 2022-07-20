@@ -18,4 +18,8 @@ class Solution:
         
         return -1
       
-      
+     
+# Since, we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be O(log N) 
+# where N is the total elements in the given array.
+
+# The algorithm runs in constant space O(1).
