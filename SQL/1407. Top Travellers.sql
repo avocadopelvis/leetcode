@@ -1,10 +1,10 @@
 # https://leetcode.com/problems/top-travellers/
 
-Note: 
-not every user has travelled, therefore distance travelled would be NULL.
-so we use IFNULL to return 0 instead of NULL.
+-- Note: 
+-- not every user has travelled, therefore distance travelled would be NULL for those users.
+-- so we use IFNULL to return 0 instead of NULL.
 
-we use LEFT JOIN since we want to know the distance traveled by each user.
+-- we use LEFT JOIN since we want to know the distance traveled by each user.
 
 SELECT u.name, IFNULL(SUM(r.distance), 0) as travelled_distance
 FROM Users u LEFT JOIN Rides r
