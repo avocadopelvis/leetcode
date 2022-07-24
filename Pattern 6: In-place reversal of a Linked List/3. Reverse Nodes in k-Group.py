@@ -2,7 +2,9 @@
 
 # Explanation:
 # https://www.youtube.com/watch?v=1UOPsfP85V4
-  
+
+# check out:
+# https://leetcode.com/problems/reverse-nodes-in-k-group/discuss/11491/Succinct-iterative-Python-O(n)-time-O(1)-space
 
 class Solution:
     def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
