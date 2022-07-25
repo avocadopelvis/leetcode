@@ -1,5 +1,8 @@
 # https://leetcode.com/problems/linked-list-cycle-ii/
 
+# Explanation:
+# https://leetcode.com/problems/linked-list-cycle-ii/discuss/1701128/C%2B%2BJavaPython-Slow-and-Fast-oror-Image-Explanation-oror-Beginner-Friendly
+
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         slow = fast = head
