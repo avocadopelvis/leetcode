@@ -23,7 +23,7 @@ class Solution:
         
         # assign prev as the middle (slow)
         # assign the node next to slow as slow
-        # prev will point to NULL
+        # prev will point to NULL to break off the first half
         prev, slow, prev.next = slow, slow.next, None
         
         # reversal
