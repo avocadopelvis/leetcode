@@ -17,9 +17,13 @@ class Solution:
         prev = None
         
         # find the middle 
+        # slow will be in the middle
         while fast and fast.next:
             slow, fast = slow.next, fast.next.next
-            
+        
+        # assign prev as the middle (slow)
+        # assign the node next to slow as slow
+        # prev will point to NULL
         prev, slow, prev.next = slow, slow.next, None
         
         # reversal
@@ -27,9 +31,9 @@ class Solution:
             slow.next, prev, slow = prev, slow, slow.next
             
         # send fast back to head (first node)
-        # slow is in prev (last node)
+        # slow is in prev (last node of the original list / first node of the reversed list)
         fast, slow = head, prev
-        
+       
         # compare values 
         while slow:
             if fast.val != slow.val:
